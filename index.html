@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Language Translation Tool - Break language barriers with advanced AI-powered translation.">
+    <title>AI Language Translation Tool | LingoShift</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Page Header -->
+        <header class="app-header">
+            <div class="header-content container">
+                <div class="logo-area">
+                    <i data-lucide="globe" class="header-icon"></i>
+                    <h1>AI Language Translation Tool</h1>
+                </div>
+                <p class="header-tagline">Break Language Barriers with AI-Powered Translation</p>
+                <p class="header-desc">Translate text instantly between multiple languages using advanced Artificial Intelligence and Machine Translation APIs. Fast, accurate, and user-friendly translations at your fingertips.</p>
+            </div>
+        </header>
+        <!-- Main Body -->
+        <div class="container main-content">
+            
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-text-block">
+                    <h2>Translate Any Language in Seconds</h2>
+                    <p>Enter your text, select the source and target languages, and let AI provide accurate translations instantly.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i data-lucide="languages" class="gradient-icon"></i>
+                        <span>Supports Multiple Languages</span>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="zap" class="gradient-icon"></i>
+                        <span>Real-Time Translation</span>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="target" class="gradient-icon"></i>
+                        <span>High Accuracy Results</span>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="copy" class="gradient-icon"></i>
+                        <span>One-Click Copy</span>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="volume-2" class="gradient-icon"></i>
+                        <span>Text-to-Speech Support</span>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="arrow-left-right" class="gradient-icon"></i>
+                        <span>Easy Language Switching</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Translator Application Grid -->
+            <div class="translator-grid">
+                <!-- Left Panel: Input, Languages & Actions -->
+                <div class="input-column">
+                    <!-- Text Input Section -->
+                    <div class="card input-card">
+                        <div class="card-header">
+                            <i data-lucide="file-text" class="gradient-icon"></i>
+                            <h3>Enter Your Text</h3>
+                        </div>
+                        <p class="card-subtext">Type or paste the text you want to translate below:</p>
+                        
+                        <div class="textarea-container">
+                            <textarea id="source-textarea" placeholder='e.g., "Hello, welcome to our AI Translation Tool."' maxlength="5000"></textarea>
+                            <button id="speech-input-btn" class="mic-btn" title="Speak to Text">
+                                <i data-lucide="mic"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="char-count-bar">
+                            <span id="char-counter">0</span> / 5000 characters
+                            <button id="clear-text-btn" class="clear-btn hidden" title="Clear Text">Clear</button>
+                        </div>
+                    </div>
+                    <!-- Language Selection Section -->
+                    <div class="card settings-card">
+                        <div class="card-header">
+                            <i data-lucide="settings" class="gradient-icon"></i>
+                            <h3>Select Languages</h3>
+                        </div>
+                        
+                        <div class="language-selection-layout">
+                            <!-- Source Language -->
+                            <div class="lang-select-group">
+                                <label for="source-lang">Source Language</label>
+                                <p class="input-hint">Choose the language of the input text.</p>
+                                <div class="select-box">
+                                    <select id="source-lang"></select>
+                                </div>
+                            </div>
+                            
+                            <!-- Swap Button -->
+                            <button id="swap-langs-btn" class="swap-button" title="Swap Languages" aria-label="Swap Languages">
+                                <i data-lucide="arrow-left-right"></i>
+                            </button>
+                            
+                            <!-- Target Language -->
+                            <div class="lang-select-group">
+                                <label for="target-lang">Target Language</label>
+                                <p class="input-hint">Choose the target language.</p>
+                                <div class="select-box">
+                                    <select id="target-lang"></select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Translate Action Button -->
+                        <div class="translate-action-box">
+                            <div class="action-desc">
+                                <strong>Translate Now:</strong> Click the button below to generate the translation.
+                            </div>
+                            <button id="translate-btn" class="translate-btn">
+                                <i data-lucide="zap" class="btn-icon"></i>
+                                <span>Translate Text</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Panel: Output & Features -->
+                <div class="output-column">
+                    <!-- Translated Output Section -->
+                    <div class="card output-card">
+                        <div class="card-header">
+                            <i data-lucide="target" class="gradient-icon"></i>
+                            <h3>Translated Result</h3>
+                            <div id="loader" class="loader hidden"></div>
+                        </div>
+                        <p class="card-subtext">Your translated text will appear here.</p>
+                        
+                        <div class="detected-lang-wrapper">
+                            <span id="detected-lang-badge" class="detected-badge hidden">Detected: English</span>
+                        </div>
+                        <textarea id="target-textarea" placeholder="Translation will appear here..." readonly></textarea>
+                        
+                        <div class="output-actions-bar">
+                            <!-- Copy Translation -->
+                            <div class="output-action-item">
+                                <p class="action-hint">Copy translated text instantly to your clipboard.</p>
+                                <button id="copy-btn" class="copy-btn">
+                                    <i data-lucide="copy" class="btn-icon"></i>
+                                    <span>Copy Text</span>
+                                </button>
+                            </div>
+                            <!-- Listen to Translation -->
+                            <div class="output-action-item">
+                                <p class="action-hint">Hear the translated text spoken aloud.</p>
+                                <button id="tts-btn" class="speak-btn">
+                                    <i data-lucide="volume-2" class="btn-icon"></i>
+                                    <span>Speak Translation</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- API Information Section -->
+                    <div class="card api-card">
+                        <div class="card-header">
+                            <i data-lucide="cpu" class="gradient-icon"></i>
+                            <h3>Translation Engine</h3>
+                        </div>
+                        <p class="api-intro">Powered by leading machine translation systems:</p>
+                        <div class="api-list">
+                            <div class="api-item">
+                                <i data-lucide="globe-2" class="api-icon-img"></i>
+                                <span>Google Translate API</span>
+                            </div>
+                            <div class="api-item">
+                                <i data-lucide="box" class="api-icon-img"></i>
+                                <span>Microsoft Translator API</span>
+                            </div>
+                        </div>
+                        <p class="api-footer-text">Ensuring accurate and reliable translations across multiple languages.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Benefits Section -->
+            <section class="benefits-section">
+                <div class="section-title-wrapper">
+                    <h2>Why Use Our Translation Tool?</h2>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i data-lucide="zap" class="benefit-icon"></i>
+                        <h4>Fast Processing</h4>
+                        <p>Get translations within seconds.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i data-lucide="shield-check" class="benefit-icon"></i>
+                        <h4>High Accuracy</h4>
+                        <p>Powered by advanced AI translation models.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i data-lucide="smile" class="benefit-icon"></i>
+                        <h4>Global Communication</h4>
+                        <p>Connect with people across different languages.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i data-lucide="smartphone" class="benefit-icon"></i>
+                        <h4>Responsive Design</h4>
+                        <p>Works seamlessly on desktop, tablet, and mobile devices.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i data-lucide="lock" class="benefit-icon"></i>
+                        <h4>Secure</h4>
+                        <p>Your text is processed safely and securely.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="container footer-content">
+                <h3>🌍 AI Language Translation Tool</h3>
+                <p class="footer-tagline">Powered by Artificial Intelligence & Machine Learning</p>
+                <hr class="footer-divider">
+                <p class="copyright">© 2026 AI Internship Project | Designed for Global Communication</p>
+            </div>
+        </footer>
+    </div>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <i data-lucide="check-circle-2" class="toast-icon"></i>
+        <span id="toast-message">Copied to clipboard!</span>
+    </div>
+    <!-- Scripts -->
+    <script src="languages.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
