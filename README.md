@@ -1,41 +1,32 @@
-# AI Language Translation Tool
+<h1 align="center">AI Language Translation Tool</h1>
+
+<h3 align="center">Production-Ready Multilingual Translation Platform</h3>
+
+<p align="center"><i>Built with <b>Python</b>, <b>Flask</b>, and <b>Vanilla JavaScript</b></i></p>
+
+<p align="center">Automatic Language Detection • Speech Recognition • Text-to-Speech • Intelligent Translation Fallback • Responsive UI</p>
+
 
 <p align="center">
-
-The **AI Language Translation Tool** is a modern full-stack web application designed to deliver fast, accurate, and accessible multilingual translation through a clean browser-based interface. Built with **Python**, **Flask**, and **Vanilla JavaScript**, the application demonstrates the integration of backend services, browser-native APIs, and external translation providers to create a seamless real-time translation experience.
-
-The platform enables users to translate text across multiple languages while supporting **automatic language detection**, **speech-to-text input**, **text-to-speech output**, **language swapping**, and **clipboard integration**. To enhance reliability and ensure uninterrupted service, the backend implements an intelligent fallback mechanism that automatically switches between multiple translation providers whenever the primary service becomes unavailable.
-
-From an engineering perspective, the project follows a modular client-server architecture with RESTful communication, clean code organization, and responsive UI design. It showcases practical experience in API integration, asynchronous request handling, browser speech technologies, error management, and scalable web application development.
-
-This project reflects modern software engineering practices by focusing on usability, maintainability, and reliability while providing a strong foundation for future enhancements such as AI-powered translation models, document translation, OCR integration, cloud deployment, and containerized application delivery.
-
-</p>
-
-<p align="center">
-
-<img src="https://skillicons.dev/icons?i=python" height="55"/>
-<img src="https://skillicons.dev/icons?i=flask" height="55"/>
-<img src="https://skillicons.dev/icons?i=html,css,js" height="55"/>
-<img src="https://skillicons.dev/icons?i=git,github,vscode" height="55"/>
-<img src="https://cdn.simpleicons.org/googlechrome/4285F4" height="50"/>
-<img src="https://cdn.simpleicons.org/javascript/F7DF1E" height="50"/>
-<img src="https://cdn.simpleicons.org/googletranslate/4285F4" height="50"/>;
-<img src="https://cdn.simpleicons.org/google/4285F4" height="50"/>
-
+  <img src="https://skillicons.dev/icons?i=python" height="48"/>
+  <img src="https://skillicons.dev/icons?i=flask" height="48"/>
+  <img src="https://skillicons.dev/icons?i=html,css,js" height="48"/>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode" height="48"/>
+  <img src="https://cdn.simpleicons.org/googletranslate/4285F4" height="45"/>
+  <img src="https://cdn.simpleicons.org/googlechrome/4285F4" height="45"/>
 </p>
 
 ---
 
-# Overview
+# About
 
-The **AI Language Translation Tool** is a full-stack web application that enables seamless translation of text across multiple languages through an intuitive browser interface. The application combines a lightweight **Flask REST API** with a responsive **Vanilla JavaScript** frontend to deliver fast, reliable, and user-friendly language translation capabilities.
+The **AI Language Translation Tool** is a modern full-stack web application designed to deliver fast, accurate, and reliable multilingual translation through a responsive browser interface. Developed using **Python**, **Flask**, and **Vanilla JavaScript**, the application integrates browser-native APIs with cloud-based translation services to provide an intuitive and seamless user experience.
 
-The system integrates browser-native speech technologies with cloud-based translation providers, allowing users to translate text through typing or voice input while also supporting synthesized speech for translated output. To improve reliability, the backend employs an intelligent fallback strategy that automatically switches between translation providers whenever the primary service becomes unavailable.
+The platform supports **Automatic Language Detection**, **Speech-2-Text Input**, **Text-2-Speech Output**, **Language Swapping**, and **Clipboard Integration**, enabling users to translate content efficiently across multiple languages. To improve service reliability, the backend implements an intelligent fallback mechanism that automatically switches between translation providers whenever the primary service is unavailable.
 
-Designed using a modular architecture, the project demonstrates practical experience in REST API development, frontend-backend communication, browser APIs, asynchronous programming, and production-oriented software engineering practices.
+Designed with a modular client-server architecture, the project demonstrates practical implementation of RESTful APIs, asynchronous communication, browser speech technologies, robust error handling, and scalable frontend-backend integration. The codebase emphasizes maintainability, readability, and extensibility, making it suitable for future enhancements such as OCR-based translation, document translation, cloud deployment, and AI-powered multilingual assistants.
 
----
+--- 
 
 # Key Features
 
@@ -50,6 +41,16 @@ Designed using a modular architecture, the project demonstrates practical experi
 | 📊 Character Counter | Displays a live character count with a maximum input limit of 5,000 characters. |
 | ⚡ Intelligent Translation Fallback | Automatically switches translation providers when the primary endpoint is unavailable. |
 | 🔔 Real-Time Notifications | Provides immediate feedback for successful operations and error handling. |
+
+---
+
+# Overview
+
+The **AI Language Translation Tool** is a full-stack web application that enables seamless translation of text across multiple languages through an intuitive browser interface. The application combines a lightweight **Flask REST API** with a responsive **Vanilla JavaScript** frontend to deliver fast, reliable, and user-friendly language translation capabilities.
+
+The system integrates browser-native speech technologies with cloud-based translation providers, allowing users to translate text through typing or voice input while also supporting synthesized speech for translated output. To improve reliability, the backend employs an intelligent fallback strategy that automatically switches between translation providers whenever the primary service becomes unavailable.
+
+Designed using a modular architecture, the project demonstrates practical experience in REST API development, frontend-backend communication, browser APIs, asynchronous programming, and production-oriented software engineering practices.
 
 ---
 
@@ -113,15 +114,18 @@ Designed using a modular architecture, the project demonstrates practical experi
 # Project Structure
 
 ```text
-AI-Language-Translation-Tool/
+AI-Language-Translation-Tool
 │
-├── app.py
-├── app.js
-├── index.html
-├── style.css
-├── languages.js
-├── requirements.txt
-└── README.md
+├── __pycache__/                         # Compiled Python cache
+├── .gitignore                           # Git ignore configuration
+├── AI Language Translation Tool.pdf     # Project report & documentation
+├── README.md                            # Project documentation
+│
+├── app.py                               # Flask application & translation API
+├── app.js                               # Client-side JavaScript logic
+├── index.html                           # Main web interface
+├── languages.js                         # Supported language configuration
+└── style.css                            # UI styling and responsive layout
 ```
 
 ---
@@ -188,6 +192,17 @@ http://127.0.0.1:5000
 6. The frontend displays the translated output and enables speech playback, clipboard copy, and additional interactions.
 
 ---
+# Project Documentation
+
+For a detailed overview of the application, user interface, and workflow, view the project documentation below.
+
+<p align="center">
+  <a href="./AI%20Language%20Translation%20Tool.pdf">
+    <img src="https://img.shields.io/badge/View_Project_Documentation-PDF-red?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"/>
+  </a>
+</p>
+
+--- 
 
 # Technical Highlights
 
