@@ -251,9 +251,9 @@ Developed as part of the **CodeAlpha Artificial Intelligence Internship Program*
 
 *Aspiring AI Engineer • Generative AI Developer • Python Developer • LLM & RAG Enthusiast*
 
-- 📧 Email: **raghul182202@gmail.com**
-- 💼 LinkedIn: **https://www.linkedin.com/in/raghul-ai-python/**
-- 💻 GitHub: **https://github.com/raghul1822**
+- Email: **raghul182202@gmail.com**
+- LinkedIn: **https://www.linkedin.com/in/raghul-ai-python/**
+- GitHub: **https://github.com/raghul1822**
 
 ---
 
